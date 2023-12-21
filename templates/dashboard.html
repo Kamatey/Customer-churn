@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<style>
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 20px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Dashboard</h1>
+	</header>
+	<main>
+		<div class="grid">
+			<img src="{{ url_for('static',filename='f.png')}}" >
+			<img src="{{ url_for('static',filename='churn.jpg')}}" >
+			<img src="{{ url_for('static',filename='cashback.png')}}" alt="cashback">
+			<img src="{{ url_for('static',filename='complain.png')}}" >
+			<img src="{{ url_for('static',filename='cor.png')}}" >
+			<img src="{{ url_for('static',filename='feature.png')}}" >
+			<img src="{{ url_for('static',filename='score.jpg')}}" >
+			<img src="{{ url_for('static',filename='tenure.png')}}" >
+		</div>
+	</main>
+	<footer>
+		<p>&copy; 2023 Data Science Product</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>E-commerce Churn prediction</title>
+    <style>
+    .form-group{
+    display:grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    }
+
+        input{
+        width: 200px;
+        }
+        form{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        }
+    </style>
+</head>
+<body>
+<h1><div style="text-align:center"><font color="blue">E-commerce Churn prediction</font></div></h1>
+<hr>
+</br>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <form method="POST" action="/predict">
+                <div class="form-group">
+                    <label for="CashbackAmount"><p class="font-weight-bold">CashbackAmount</p></label>
+                    <input type="text" name="CashbackAmount">
+                </div>
+
+                <div class="form-group">
+                    <label for="WarehouseToHome"><p class="font-weight-bold">WarehouseToHome</p></label>
+                    <input type="text" name="WarehouseToHome">
+                </div>
+
+                <div class="form-group">
+                    <label for="OrderAmountHikeFromlastYear"><p class="font-weight-bold">OrderAmountHikeFromlastYear</p></label>
+                    <input type="text" name="OrderAmountHikeFromlastYear">
+                </div>
+
+                <div class="form-group">
+                    <label for="Tenure"><p class="font-weight-bold">Tenure</p></label>
+                    <input type="text" name="Tenure">
+                </div>
+
+                <div class="form-group">
+                    <label for="DaySinceLastOrder"><p class="font-weight-bold">DaySinceLastOrder</p></label>
+                    <input type="text" name="DaySinceLastOrder">
+                </div>
+
+                <div class="form-group">
+                    <label for="NumberOfAddress"><p class="font-weight-bold">NumberOfAddress</p></label>
+                    <input type="text" name="NumberOfAddress">
+                </div>
+
+                <div class="form-group">
+                    <label for="SatisfactionScore"><p class="font-weight-bold">SatisfactionScore</p></label>
+                    <input type="text" name="SatisfactionScore">
+                </div>
+
+                <div class="form-group">
+                    <label for="CityTier"><p class="font-weight-bold">CityTier</p></label>
+                    <input type="text" name="CityTier">
+                </div>
+
+                <div class="form-group">
+                    <label for="Complain"><p class="font-weight-bold">Complain</p></label>
+                    <input type="text" name="Complain">
+                </div>
+
+                <div class="form-group">
+                    <label for="NumberOfDeviceRegistered"><p class="font-weight-bold">NumberOfDeviceRegistered</p></label>
+                    <input type="text" name="NumberOfDeviceRegistered">
+                </div>
+
+
+
+                <input class="btn btn-secondary" type="submit" value="Submit">
+
+            </form>
+            <button><a href="{{url_for('dashboard')}}">dashboard</a></button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
